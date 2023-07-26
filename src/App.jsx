@@ -18,7 +18,7 @@ function App() {
       <section className="l-card__text"><p style={{textAlign: "center",width: "calc(100vw - 100px)"}}>Adkimsm</p></section>
   </div><main>
             {issues.map((res, i) => {
-              if (res.body) {return (
+              if (res.body && res.user.login === "Adkimsm" && res.state === "open") {return (
                   <a href={res.html_url} key={i}>
                     <div className="l-card l-card_fixed">
                       <section className="l-card__text">
